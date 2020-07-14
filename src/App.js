@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
+import "./App.css"
 
 function Topic({topic,index}){
 return (
-  <div>
+  <div className="topic">
     {topic.name}
     {topic.title}
   </div>
@@ -22,6 +23,7 @@ const handleSubmit=e=> {
 
 return (
 <form onSubmit={handleSubmit}>
+<label></label>
 <input type="text"  className="input" value={name} onChange={e=>setName(e.target.value)}/>
 <button type="submit">Submit</button>
 </form>
@@ -45,7 +47,7 @@ const addTopics=name=>{
 
   return(
     <div className="App">
-      <div>
+      <div className="topics">
           {topics.map((topic,index)=>(
             <Topic key={index} index={index} topic={topic}/>
           ))}
