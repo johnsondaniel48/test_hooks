@@ -51,7 +51,7 @@ const addTopics=name=>{
           {topics.map((topic,index)=>(
             <Topic key={index} index={index} topic={topic}/>
           ))}
-          <TopicForm addTopics={addTopics}/>
+          <TopicForm addTopics={adddTopics}/>
       </div>
     </div>
   )
